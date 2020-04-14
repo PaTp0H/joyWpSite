@@ -1,0 +1,37 @@
+.layout__wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+// Mobile 
+
+@include media-breakpoint-down(sm) {
+
+}
+
+// tablet 
+
+@include media-breakpoint-down(md) {
+    .layout__wrapper {
+        max-width: 100%;
+        padding: 0 25px;
+    }
+}
+
+// Desktop
+
+@include media-breakpoint-up(xl) {
+    .layout__wrapper {
+        max-width: 1440px;
+        padding: 0 25px;
+    }
+}
+// Desktop large
+
+@include media-breakpoint-up(xxl) {
+    .layout__wrapper {
+        padding: 0 10px;
+    }
+}

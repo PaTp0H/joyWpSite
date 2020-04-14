@@ -1,0 +1,21 @@
+.about-page {
+    .top-banner {
+        background-color: $color-10;
+    }
+    .custom-title {
+        color: $color-8;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .big-image-block {
+        margin-bottom: 40px;
+    }
+}
+
+// Tablet
+@include media-breakpoint-up(md) {
+    .big-image-block {
+        margin-bottom: 185px;
+    }
+}

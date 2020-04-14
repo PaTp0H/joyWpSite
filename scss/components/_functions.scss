@@ -1,0 +1,3 @@
+@mixin fsr($px){
+    font-size: $px / 16 + rem;
+}

@@ -1,0 +1,85 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3851622, 2019-12-30T04:27:40-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Gilroy-Medium by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/medium/
+ * 
+ * Webfont: Gilroy-Light by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/light/
+ * 
+ * Webfont: Gilroy-Bold by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/bold/
+ * 
+ * 
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ * 
+ * © 2019 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("http://hello.myfonts.net/count/3ac566");
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/3AC566_0_0.eot');
+    src: url('../fonts/3AC566_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3AC566_0_0.woff2') format('woff2'), url('../fonts/3AC566_0_0.woff') format('woff'), url('../fonts/3AC566_0_0.ttf') format('truetype');
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/3AC566_1_0.eot');
+    src: url('../fonts/3AC566_1_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3AC566_1_0.woff2') format('woff2'), url('../fonts/3AC566_1_0.woff') format('woff'), url('../fonts/3AC566_1_0.ttf') format('truetype');
+    font-weight: 300;
+}
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/3AC566_2_0.eot');
+    src: url('../fonts/3AC566_2_0.eot?#iefix') format('embedded-opentype'), url('../fonts/3AC566_2_0.woff2') format('woff2'), url('../fonts/3AC566_2_0.woff') format('woff'), url('../fonts/3AC566_2_0.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?uu6lmo');
+    src: url('../fonts/icomoon.eot?uu6lmo#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?uu6lmo') format('truetype'),
+        url('../fonts/icomoon.woff?uu6lmo') format('woff'),
+        url('../fonts/icomoon.svg?uu6lmo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+    content: "\e900";
+}

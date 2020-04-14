@@ -1,0 +1,181 @@
+.j-two-columns {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    .j-column {
+        h2 {
+            color: $color-9;
+        }
+        p {
+            color: #000000;
+            @include fsr(18);
+            line-height: 1.56;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+        &:first-child {
+            background-image: url('../images/joy-icon.svg');
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-position-y: 20px;
+            background-size: contain;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 21px;
+            i {
+                transition: color $anim-fast;
+                margin-right: 20px;
+                @include fsr(29);
+            }
+            a {
+                position: relative;
+                overflow: hidden;
+                line-height: 1.82;
+                transition: color $anim-fast;
+                color: $color-1;
+                font-weight: 500;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $color-1;
+                    transition: transform $anim-fast;
+                }
+            }
+            &:hover {
+                a {
+                    color: $color-1;
+                    &::after {
+                        transform: translateX(-110%);
+                    }
+                }
+                i {
+                    color: $color-1 !important;
+                }
+            }
+            &:nth-child(1n+1) {
+                i {
+                    color:$color-4;
+                }
+            }
+            &:nth-child(2n+2) {
+                i {
+                    color:  $color-11;
+                }
+            }
+            &:nth-child(3n+3) {
+                i {
+                    color: $color-9;
+                }
+            }
+        }
+    }
+}
+
+// Mobile - Tablet 
+
+@include media-breakpoint-down(sm) {
+    .j-two-columns {
+        flex-direction: column;
+        margin-top: 40px;
+        &.layout__wrapper {
+            padding: 0;
+        }
+        .j-column {
+            padding: 0 25px 40px;
+            h2 {
+                @include fsr(55);
+                line-height: 1.64;
+                margin-bottom: 10px;
+            }
+            p {
+                @include fsr(16);
+                line-height: 1.5;
+                letter-spacing: 0.44px;
+            }
+            &:first-child {
+                background-position-y: 105px;
+                background-position-x: 155px;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+            li {
+                a {
+                    @include fsr(18);
+                    text-decoration: underline;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile xs
+@include media-breakpoint-down(xs) {
+
+}
+
+// Tablet
+@include media-breakpoint-up(md) {
+    .j-two-columns {
+        margin-bottom: 185px;
+        .j-column {
+            h2 {
+                @include fsr(70);
+                margin-bottom: 20px;
+            }
+            width: calc((100% - 50px) / 2);
+            &:first-child {
+                padding-right: 50px;
+            }
+            li {
+                a {
+                    @include fsr(18);
+                    &:after {
+                        bottom: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Desktop
+@include media-breakpoint-up(lg) {
+    .j-two-columns {
+        .j-column {
+            h2 {
+                @include fsr(90);
+                line-height: 1;
+                margin-bottom: 25px;
+            }
+            li {
+                a {
+                    @include fsr(22);
+                    &:after {
+                        bottom: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Desktop
+@include media-breakpoint-up(xxl) {
+    .j-two-columns {
+        .j-column {
+            width: calc((100% - 170px) / 2);
+            &:first-child {
+                padding-right: 145px;
+            }
+        }
+    }
+}

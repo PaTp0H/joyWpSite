@@ -1,0 +1,116 @@
+.j-four-columns {
+    display: flex;
+    align-items: flex-start;
+
+    .j-four-column {
+        display: flex;
+        align-items: center;
+        
+        figure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &>p {
+            line-height: 1.5;
+            font-weight: 300;
+            @include fsr(16);
+            word-break: break-word;
+            text-align: left;
+            &:first-of-type {
+                margin-bottom: 10px;
+                line-height: 1.4;
+                font-weight: 600;
+                @include fsr(20);
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Mobile - Tablet 
+
+@include media-breakpoint-down(sm) {
+    .j-four-columns {
+        flex-direction: column;
+        margin-bottom: 30px;
+        .j-four-column {
+            width: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            position: relative;
+            figure {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 115px;
+                flex: 0 0 auto;
+                padding-right: 30px;
+                height: 100px;
+                max-height: 100%;
+                img {
+                    max-height: 100%;
+                }
+            }
+            &>p {
+                width: calc(100% - 115px);
+                flex: 1 1 auto;
+            }
+            margin-bottom: 40px;
+        }
+    }
+}
+
+// Mobile xs
+@include media-breakpoint-down(xs) {
+
+}
+
+// Tablet
+@include media-breakpoint-up(md) {
+    .j-four-columns {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 160px;
+        .j-four-column {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: calc((100% - 100px) / 2);
+            figure {
+                height: 160px;
+                margin-bottom: 25px;
+            }
+            &>p {
+                line-height: 1.56;
+                @include fsr(18);
+                text-align: center;
+                &:first-of-type {
+                    margin-bottom: 19px;
+                    line-height: 1.27;
+                    @include fsr(22);
+                }
+                &:last-of-type {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+// Desktop
+@include media-breakpoint-up(lg) {
+
+}
+
+// Desktop
+@include media-breakpoint-up(xl) {
+    .j-four-columns {
+        justify-content: space-between;
+        .j-four-column {
+            width: calc((100% - 270px) / 4);
+        }
+    }
+}

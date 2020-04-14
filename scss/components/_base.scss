@@ -1,0 +1,167 @@
+
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font: 300 normal 1.15rem/1.2 'Gilroy';
+    letter-spacing: normal;
+    color: $color-1;
+    padding-top: 75px;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px $color-5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-2;
+    }
+    &.overflow {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+}
+
+dl, ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+a {
+    color: $color-1;
+    transition: color $anim-fast, border-color $anim-fast;
+    @include hover() {
+        color: $link-color;
+        text-decoration: none;
+    }
+}
+input,select, button, textarea {
+    appearance: none;
+    border: 0;
+    text-shadow: none;
+    box-shadow: none;
+    &:focus,
+    &:active {
+        outline: 0;
+    }
+}
+h1 {
+    @include fsr(105);
+    font-weight: 600;
+    line-height: 1.14;
+}
+h2 {
+    @include fsr(95);
+    font-weight: 600;
+    line-height: 1.05;
+    color: $color-3;
+}
+h3 {
+    @include fsr(22);
+    font-weight: 600;
+    line-height: 1.27;
+    color: $color-3;
+}
+.custom-title {
+    text-align: center;
+    font-weight: 600;
+}
+
+blockquote {
+    position: relative;
+    display: block;
+    font-weight: 600;
+    &:after, &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+picture, figure {
+    display: block;       
+}
+.main {
+    flex: 1 0 auto;
+}
+
+// Mobile - Tablet 
+
+@include media-breakpoint-down(sm) {
+    body {
+        padding-top: 65px;
+    }
+    h1 {
+        @include fsr(55);
+    }
+    h2 {
+        @include fsr(50);
+        line-height: 1.14;
+        text-align: left;
+    }
+    h3 {
+        @include fsr(20);
+        font-weight: 600;
+        line-height: 1.27;
+        color: $color-3;
+    }
+    blockquote {
+        @include fsr(16);
+        line-height: 1.63;
+        text-indent: 2rem;
+        text-align: center;
+        font-weight: 300;
+        &:after, &:before {
+            top: -15px;
+            width: 12px;
+            height: 25px;
+            background-color: rgba($color: #fa474f, $alpha: .4);
+        }
+        &::before {
+            left: 20px;
+        }
+    }
+    .custom-title {
+        @include fsr(55);
+        line-height: 1.09;
+        margin-bottom: 20px;
+        text-align: left;
+        padding: 0 25px;
+    }
+}
+@include media-breakpoint-up(md) {
+    blockquote {
+        padding: 18px 0 0 75px;
+        @include fsr(25);
+        line-height: 1.4;
+        &:after, &:before {
+            background-color: rgba($color: #ffffff, $alpha: .7);
+            width: 20px;
+            height: 40px;
+        }
+        &:after {
+            left: 0;        
+        }
+        &::before {
+            left: 30px;
+        }
+    }
+    .custom-title {
+        @include fsr(90);
+        line-height: 1.5;
+        margin-bottom: 100px;
+    }
+}
